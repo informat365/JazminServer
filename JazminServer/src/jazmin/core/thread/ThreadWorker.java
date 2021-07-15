@@ -105,6 +105,12 @@ public class ThreadWorker implements Runnable {
 					exception=new AppException(exception.getMessage());
 				}
 			}
+			if(globalDispatcherCallbacks!=null){
+				for(DispatcherCallback c:globalDispatcherCallbacks){
+					c.end(instance, method,args,ret,exception);
+				}
+			}
+			callback.end(instance, method,args,ret,exception);
 			if(traceLog){
 				if (logger.isInfoEnabled()) {
 					logger.info("<invoke:{} time:{}-{}", methodName,
@@ -114,12 +120,6 @@ public class ThreadWorker implements Runnable {
 					logger.debug(DumpUtil.dumpInvokeObject("<invoke:" + methodName,ret));
 				}	
 			}
-			if(globalDispatcherCallbacks!=null){
-				for(DispatcherCallback c:globalDispatcherCallbacks){
-					c.end(instance, method,args,ret,exception);
-				}
-			}
-			callback.end(instance, method,args,ret,exception);
 			dispatcher.statMethod(method, exception,(int) runTime,(int) fullTime);
 			Thread.currentThread().setName(oldName);
 		}

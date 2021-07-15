@@ -480,7 +480,6 @@ public class JazminRpcDriver extends Driver{
 		if(principal==null){
 			principal=Jazmin.getServerName();
 		}
-		client=new RpcClient();
 		client.setPrincipal(principal);
 		client.setPushMessageCallback(this::handlePushMessage);
 		serverInfoMap.forEach((cluster,serverList)->{

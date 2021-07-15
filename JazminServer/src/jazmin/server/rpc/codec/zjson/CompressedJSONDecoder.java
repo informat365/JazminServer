@@ -20,7 +20,7 @@ import com.alibaba.fastjson.JSON;
  * @date Jun 7, 2014
  */
 public class CompressedJSONDecoder extends ByteToMessageDecoder {
-	private static final int MAX_MESSAGE_LENGTH = 1024 * 1024*10;
+	private static final long MAX_MESSAGE_LENGTH = 1024 * 1024*1024;
 	private static Logger logger=LoggerFactory.get(CompressedJSONDecoder.class);
 	//
 	NetworkTrafficStat networkTrafficStat;

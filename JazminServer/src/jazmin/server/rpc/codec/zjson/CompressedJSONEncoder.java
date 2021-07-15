@@ -21,7 +21,7 @@ import com.alibaba.fastjson.serializer.SerializerFeature;
  */
 @Sharable
 public class CompressedJSONEncoder extends MessageToByteEncoder<RpcMessage> {
-	private static final int MAX_MESSAGE_LENGTH=1024*1024*10;
+	private static final long MAX_MESSAGE_LENGTH=1024*1024*1024;
 	private static Logger logger=LoggerFactory.get(CompressedJSONEncoder.class);
 	//
 	NetworkTrafficStat networkTrafficStat;
