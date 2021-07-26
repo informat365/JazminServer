@@ -23,7 +23,7 @@ import com.alibaba.fastjson.serializer.SerializerFeature;
 public class JSONEncoder extends MessageToByteEncoder<RpcMessage> {
 
 	private static Logger logger=LoggerFactory.get(FSTEncoder.class);
-	private static final int MAX_MESSAGE_LENGTH=1024*1024*10;
+	private static final int MAX_MESSAGE_LENGTH=1024*1024*1024;
 	//
 	NetworkTrafficStat networkTrafficStat;
 	public JSONEncoder(NetworkTrafficStat networkTrafficStat) {

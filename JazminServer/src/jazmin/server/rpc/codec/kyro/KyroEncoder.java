@@ -23,7 +23,7 @@ import jazmin.server.rpc.codec.CodecUtil;
 @Sharable
 public class KyroEncoder extends MessageToByteEncoder<RpcMessage> {
 	private static Logger logger=LoggerFactory.get(KyroEncoder.class);
-	private static final int MAX_MESSAGE_LENGTH=1024*1024*10;
+	private static final int MAX_MESSAGE_LENGTH=1024*1024*1024;
 	//
 	NetworkTrafficStat networkTrafficStat;
 	//

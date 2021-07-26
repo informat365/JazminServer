@@ -20,7 +20,7 @@ import org.nustaq.serialization.FSTConfiguration;
  */
 public class FSTDecoder extends ByteToMessageDecoder {
 	private static Logger logger=LoggerFactory.get(FSTDecoder.class);
-	private static final int MAX_MESSAGE_LENGTH = 1024 * 1024*10;
+	private static final int MAX_MESSAGE_LENGTH = 1024 * 1024*1024;
 	//
 	NetworkTrafficStat networkTrafficStat;
 	static FSTConfiguration conf = FSTConfiguration.createDefaultConfiguration();
