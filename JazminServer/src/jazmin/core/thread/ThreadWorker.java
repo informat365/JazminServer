@@ -122,18 +122,18 @@ public class ThreadWorker implements Runnable {
 					if(ret!=null) {
 						if( ret instanceof Collection) {
 							Collection<?> list=(Collection<?>)ret;
-							if(list.size()<=10) {
+							if(list.size()<=100) {
 								logger.debug(DumpUtil.dumpInvokeObject("<invoke:" + methodName,ret));
 							}else {
-								logger.debug(DumpUtil.dumpInvokeObject("<invoke:" + methodName,"size:"+list.size()));
+								logger.debug(DumpUtil.dumpInvokeObject("<invoke:" + methodName,"list size:"+list.size()));
 							}
 						}
 						else if( ret instanceof Map) {
 							Map<?,?> map=(Map<?,?>)ret;
-							if(map.size()<=10) {
+							if(map.size()<=100) {
 								logger.debug(DumpUtil.dumpInvokeObject("<invoke:" + methodName,ret));
 							}else {
-								logger.debug(DumpUtil.dumpInvokeObject("<invoke:" + methodName,"size:"+map.size()));
+								logger.debug(DumpUtil.dumpInvokeObject("<invoke:" + methodName,"map size:"+map.size()));
 							}
 						}else {
 							logger.debug(DumpUtil.dumpInvokeObject("<invoke:" + methodName,ret));
