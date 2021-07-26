@@ -5,7 +5,9 @@ package jazmin.core.thread;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.util.Collection;
 import java.util.List;
+import java.util.Map;
 
 import jazmin.core.app.AppException;
 import jazmin.log.Logger;
@@ -117,7 +119,28 @@ public class ThreadWorker implements Runnable {
 							runTime,fullTime);
 				}
 				if (logger.isDebugEnabled()) {
-					logger.debug(DumpUtil.dumpInvokeObject("<invoke:" + methodName,ret));
+					if(ret!=null) {
+						if( ret instanceof Collection) {
+							Collection<?> list=(Collection<?>)ret;
+							if(list.size()<=10) {
+								logger.debug(DumpUtil.dumpInvokeObject("<invoke:" + methodName,ret));
+							}else {
+								logger.debug(DumpUtil.dumpInvokeObject("<invoke:" + methodName,"size:"+list.size()));
+							}
+						}
+						else if( ret instanceof Map) {
+							Map<?,?> map=(Map<?,?>)ret;
+							if(map.size()<=10) {
+								logger.debug(DumpUtil.dumpInvokeObject("<invoke:" + methodName,ret));
+							}else {
+								logger.debug(DumpUtil.dumpInvokeObject("<invoke:" + methodName,"size:"+map.size()));
+							}
+						}else {
+							logger.debug(DumpUtil.dumpInvokeObject("<invoke:" + methodName,ret));
+						}
+					}else {
+						logger.debug(DumpUtil.dumpInvokeObject("<invoke:" + methodName, null));
+					}
 				}	
 			}
 			dispatcher.statMethod(method, exception,(int) runTime,(int) fullTime);
