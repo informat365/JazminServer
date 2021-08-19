@@ -1,5 +1,8 @@
 package jazmin.server.rpc.codec.json;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.serializer.SerializerFeature;
+
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandler.Sharable;
 import io.netty.channel.ChannelHandlerContext;
@@ -10,10 +13,6 @@ import jazmin.log.LoggerFactory;
 import jazmin.misc.io.NetworkTrafficStat;
 import jazmin.server.rpc.RpcMessage;
 import jazmin.server.rpc.codec.CodecUtil;
-import jazmin.server.rpc.codec.fst.FSTEncoder;
-
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.serializer.SerializerFeature;
 /**
  * 
  * @author yama
@@ -22,7 +21,7 @@ import com.alibaba.fastjson.serializer.SerializerFeature;
 @Sharable
 public class JSONEncoder extends MessageToByteEncoder<RpcMessage> {
 
-	private static Logger logger=LoggerFactory.get(FSTEncoder.class);
+	private static Logger logger=LoggerFactory.get(JSONEncoder.class);
 	private static final int MAX_MESSAGE_LENGTH=1024*1024*1024;
 	//
 	NetworkTrafficStat networkTrafficStat;

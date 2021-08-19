@@ -43,8 +43,6 @@ import jazmin.misc.io.IOWorker;
 import jazmin.misc.io.NetworkTrafficStat;
 import jazmin.server.console.ConsoleServer;
 import jazmin.server.rpc.RpcMessage.AppExceptionMessage;
-import jazmin.server.rpc.codec.fst.FSTDecoder;
-import jazmin.server.rpc.codec.fst.FSTEncoder;
 import jazmin.server.rpc.codec.json.JSONDecoder;
 import jazmin.server.rpc.codec.json.JSONEncoder;
 import jazmin.server.rpc.codec.kyro.KyroDecoder;
@@ -85,7 +83,6 @@ public class RpcServer extends Server implements Registerable{
 	//
 	public static final int CODEC_JSON=1;
 	public static final int CODEC_ZJSON=2;
-	public static final int CODEC_FST=3;
 	public static final int CODEC_KYRO=4;
 	
 	public static int codec=CODEC_ZJSON;
@@ -240,11 +237,6 @@ public class RpcServer extends Server implements Registerable{
 					sc.pipeline().addLast(
 							new JSONEncoder(networkTrafficStat), 
 							new JSONDecoder(networkTrafficStat),
-							rpcServerHandler);
-				}else if(codec==CODEC_FST){
-					sc.pipeline().addLast(
-							new FSTEncoder(networkTrafficStat), 
-							new FSTDecoder(networkTrafficStat),
 							rpcServerHandler);
 				}else if(codec==CODEC_KYRO){
 					sc.pipeline().addLast(

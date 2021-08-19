@@ -25,8 +25,6 @@ import jazmin.log.Logger;
 import jazmin.log.LoggerFactory;
 import jazmin.misc.io.IOWorker;
 import jazmin.misc.io.NetworkTrafficStat;
-import jazmin.server.rpc.codec.fst.FSTDecoder;
-import jazmin.server.rpc.codec.fst.FSTEncoder;
 import jazmin.server.rpc.codec.json.JSONDecoder;
 import jazmin.server.rpc.codec.json.JSONEncoder;
 import jazmin.server.rpc.codec.kyro.KyroDecoder;
@@ -158,11 +156,6 @@ public class RpcClient {
 					sc.pipeline().addLast(
 							new JSONEncoder(networkTrafficStat), 
 							new JSONDecoder(networkTrafficStat),
-							clientHandler);
-				}else if(RpcServer.codec==RpcServer.CODEC_FST){
-					sc.pipeline().addLast(
-							new FSTEncoder(networkTrafficStat), 
-							new FSTDecoder(networkTrafficStat),
 							clientHandler);
 				}else if(RpcServer.codec==RpcServer.CODEC_KYRO){
 					sc.pipeline().addLast(
