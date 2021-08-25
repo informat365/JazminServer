@@ -65,6 +65,6 @@
 	<classpathentry kind="lib" path="lib/druid-1.2.1.jar"/>
 	<classpathentry kind="lib" path="lib/fastjson-1.2.73.jar"/>
 	<classpathentry kind="lib" path="lib/kingbase8-8.2.0.jar"/>
-	<classpathentry kind="lib" path="lib/SmartJdbc-2.0.36.jar"/>
+	<classpathentry kind="lib" path="lib/smartjdbc-2.0.38.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
