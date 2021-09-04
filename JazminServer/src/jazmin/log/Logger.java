@@ -21,14 +21,23 @@ public class Logger{
 	 * @see org.apache.logging.log4j.Logger#debug(java.lang.Object, java.lang.Throwable)
 	 */
 	public void debug(Object arg0, Throwable arg1) {
-		realLogger.debug(arg0, arg1);
+		try {
+			realLogger.debug(arg0, arg1);
+		} catch (Exception e) {
+			
+		}
+		
 	}
 	/**
 	 * @param arg0
 	 * @see org.apache.logging.log4j.Logger#debug(java.lang.Object)
 	 */
 	public void debug(Object arg0) {
-		realLogger.debug(arg0);
+		try {
+			realLogger.debug(arg0);
+		} catch (Exception e) {
+		}
+		
 	}
 	/**
 	 * @param arg0
@@ -36,7 +45,11 @@ public class Logger{
 	 * @see org.apache.logging.log4j.Logger#debug(java.lang.String, java.lang.Object[])
 	 */
 	public void debug(String arg0, Object... arg1) {
-		realLogger.debug(arg0, arg1);
+		try {
+			realLogger.debug(arg0, arg1);
+		} catch (Exception e) {
+		}
+		
 	}
 	/**
 	 * @param arg0
@@ -44,14 +57,23 @@ public class Logger{
 	 * @see org.apache.logging.log4j.Logger#debug(java.lang.String, java.lang.Throwable)
 	 */
 	public void debug(String arg0, Throwable arg1) {
-		realLogger.debug(arg0, arg1);
+		try {
+			realLogger.debug(arg0, arg1);
+		} catch (Exception e) {
+		}
+		
 	}
 	/**
 	 * @param arg0
 	 * @see org.apache.logging.log4j.Logger#debug(java.lang.String)
 	 */
 	public void debug(String arg0) {
-		realLogger.debug(arg0);
+		try {
+			realLogger.debug(arg0);
+		} catch (Exception e) {
+			
+		}
+		
 	}
 	/**
 	 * @param arg0
@@ -59,14 +81,24 @@ public class Logger{
 	 * @see org.apache.logging.log4j.Logger#error(java.lang.Object, java.lang.Throwable)
 	 */
 	public void error(Object arg0, Throwable arg1) {
-		realLogger.error(arg0, arg1);
+		try {
+			realLogger.error(arg0, arg1);
+		} catch (Exception e) {
+			
+		}
+		
 	}
 	/**
 	 * @param arg0
 	 * @see org.apache.logging.log4j.Logger#error(java.lang.Object)
 	 */
 	public void error(Object arg0) {
-		realLogger.error(arg0);
+		try {
+			realLogger.error(arg0);
+		} catch (Exception e) {
+			
+		}
+		
 	}
 	/**
 	 * @param arg0
@@ -74,7 +106,11 @@ public class Logger{
 	 * @see org.apache.logging.log4j.Logger#error(java.lang.String, java.lang.Object[])
 	 */
 	public void error(String arg0, Object... arg1) {
-		realLogger.error(arg0, arg1);
+		try {
+			realLogger.error(arg0, arg1);
+		} catch (Exception e) {
+			
+		}
 	}
 	/**
 	 * @param arg0
@@ -82,14 +118,24 @@ public class Logger{
 	 * @see org.apache.logging.log4j.Logger#error(java.lang.String, java.lang.Throwable)
 	 */
 	public void error(String arg0, Throwable arg1) {
-		realLogger.error(arg0, arg1);
+		try {
+			realLogger.error(arg0, arg1);
+		} catch (Exception e) {
+			
+		}
+		
 	}
 	/**
 	 * @param arg0
 	 * @see org.apache.logging.log4j.Logger#error(java.lang.String)
 	 */
 	public void error(String arg0) {
-		realLogger.error(arg0);
+		try {
+			realLogger.error(arg0);
+		} catch (Exception e) {
+			
+		}
+		
 	}
 	/**
 	 * @param arg0
@@ -97,14 +143,24 @@ public class Logger{
 	 * @see org.apache.logging.log4j.Logger#fatal(java.lang.Object, java.lang.Throwable)
 	 */
 	public void fatal(Object arg0, Throwable arg1) {
-		realLogger.fatal(arg0, arg1);
+		try {
+			realLogger.fatal(arg0, arg1);
+		} catch (Exception e) {
+			
+		}
+		
 	}
 	/**
 	 * @param arg0
 	 * @see org.apache.logging.log4j.Logger#fatal(java.lang.Object)
 	 */
 	public void fatal(Object arg0) {
-		realLogger.fatal(arg0);
+		try {
+			realLogger.fatal(arg0);
+		} catch (Exception e) {
+			
+		}
+		
 	}
 	/**
 	 * @param arg0
@@ -112,7 +168,12 @@ public class Logger{
 	 * @see org.apache.logging.log4j.Logger#fatal(java.lang.String, java.lang.Object[])
 	 */
 	public void fatal(String arg0, Object... arg1) {
-		realLogger.fatal(arg0, arg1);
+		try {
+			realLogger.fatal(arg0, arg1);
+		} catch (Exception e) {
+			
+		}
+		
 	}
 	/**
 	 * @param arg0
@@ -120,14 +181,24 @@ public class Logger{
 	 * @see org.apache.logging.log4j.Logger#fatal(java.lang.String, java.lang.Throwable)
 	 */
 	public void fatal(String arg0, Throwable arg1) {
-		realLogger.fatal(arg0, arg1);
+		try {
+			realLogger.fatal(arg0, arg1);
+		} catch (Exception e) {
+			
+		}
+		
 	}
 	/**
 	 * @param arg0
 	 * @see org.apache.logging.log4j.Logger#fatal(java.lang.String)
 	 */
 	public void fatal(String arg0) {
-		realLogger.fatal(arg0);
+		try {
+			realLogger.fatal(arg0);
+		} catch (Exception e) {
+			
+		}
+		
 	}
 	/**
 	 * @param arg0
@@ -135,14 +206,24 @@ public class Logger{
 	 * @see org.apache.logging.log4j.Logger#info(java.lang.Object, java.lang.Throwable)
 	 */
 	public void info(Object arg0, Throwable arg1) {
-		realLogger.info(arg0, arg1);
+		try {
+			realLogger.info(arg0, arg1);
+		} catch (Exception e) {
+			
+		}
+		
 	}
 	/**
 	 * @param arg0
 	 * @see org.apache.logging.log4j.Logger#info(java.lang.Object)
 	 */
 	public void info(Object arg0) {
-		realLogger.info(arg0);
+		try {
+			realLogger.info(arg0);
+		} catch (Exception e) {
+			
+		}
+		
 	}
 	/**
 	 * @param arg0
@@ -150,7 +231,12 @@ public class Logger{
 	 * @see org.apache.logging.log4j.Logger#info(java.lang.String, java.lang.Object[])
 	 */
 	public void info(String arg0, Object... arg1) {
-		realLogger.info(arg0, arg1);
+		try {
+			realLogger.info(arg0, arg1);
+		} catch (Exception e) {
+			
+		}
+		
 	}
 	/**
 	 * @param arg0
@@ -158,14 +244,24 @@ public class Logger{
 	 * @see org.apache.logging.log4j.Logger#info(java.lang.String, java.lang.Throwable)
 	 */
 	public void info(String arg0, Throwable arg1) {
-		realLogger.info(arg0, arg1);
+		try {
+			realLogger.info(arg0, arg1);
+		} catch (Exception e) {
+			
+		}
+		
 	}
 	/**
 	 * @param arg0
 	 * @see org.apache.logging.log4j.Logger#info(java.lang.String)
 	 */
 	public void info(String arg0) {
-		realLogger.info(arg0);
+		try {
+			realLogger.info(arg0);
+		} catch (Exception e) {
+			
+		}
+		
 	}
 	/**
 	 * @return
@@ -223,14 +319,24 @@ public class Logger{
 	 * @see org.apache.logging.log4j.Logger#trace(java.lang.Object, java.lang.Throwable)
 	 */
 	public void trace(Object arg0, Throwable arg1) {
-		realLogger.trace(arg0, arg1);
+		try {
+			realLogger.trace(arg0, arg1);
+		} catch (Exception e) {
+			
+		}
+		
 	}
 	/**
 	 * @param arg0
 	 * @see org.apache.logging.log4j.Logger#trace(java.lang.Object)
 	 */
 	public void trace(Object arg0) {
-		realLogger.trace(arg0);
+		try {
+			realLogger.trace(arg0);
+		} catch (Exception e) {
+			
+		}
+		
 	}
 	/**
 	 * @param arg0
@@ -238,7 +344,12 @@ public class Logger{
 	 * @see org.apache.logging.log4j.Logger#trace(java.lang.String, java.lang.Object[])
 	 */
 	public void trace(String arg0, Object... arg1) {
-		realLogger.trace(arg0, arg1);
+		try {
+			realLogger.trace(arg0, arg1);
+		} catch (Exception e) {
+			
+		}
+		
 	}
 	/**
 	 * @param arg0
@@ -246,14 +357,23 @@ public class Logger{
 	 * @see org.apache.logging.log4j.Logger#trace(java.lang.String, java.lang.Throwable)
 	 */
 	public void trace(String arg0, Throwable arg1) {
-		realLogger.trace(arg0, arg1);
+		try {
+			realLogger.trace(arg0, arg1);
+		} catch (Exception e) {
+			
+		}
+		
 	}
 	/**
 	 * @param arg0
 	 * @see org.apache.logging.log4j.Logger#trace(java.lang.String)
 	 */
 	public void trace(String arg0) {
-		realLogger.trace(arg0);
+		try {
+			realLogger.trace(arg0);
+		} catch (Exception e) {
+			
+		}
 	}
 	/**
 	 * @param arg0
@@ -261,14 +381,23 @@ public class Logger{
 	 * @see org.apache.logging.log4j.Logger#warn(java.lang.Object, java.lang.Throwable)
 	 */
 	public void warn(Object arg0, Throwable arg1) {
-		realLogger.warn(arg0, arg1);
+		try {
+			realLogger.warn(arg0, arg1);
+		} finally {
+		}
+		
 	}
 	/**
 	 * @param arg0
 	 * @see org.apache.logging.log4j.Logger#warn(java.lang.Object)
 	 */
 	public void warn(Object arg0) {
-		realLogger.warn(arg0);
+		try {
+			realLogger.warn(arg0);
+		} catch (Exception e) {
+			
+		}
+		
 	}
 	/**
 	 * @param arg0
@@ -276,7 +405,12 @@ public class Logger{
 	 * @see org.apache.logging.log4j.Logger#warn(java.lang.String, java.lang.Object[])
 	 */
 	public void warn(String arg0, Object... arg1) {
-		realLogger.warn(arg0, arg1);
+		try {
+			realLogger.warn(arg0, arg1);
+		} catch (Exception e) {
+			
+		}
+		
 	}
 	/**
 	 * @param arg0
@@ -284,21 +418,36 @@ public class Logger{
 	 * @see org.apache.logging.log4j.Logger#warn(java.lang.String, java.lang.Throwable)
 	 */
 	public void warn(String arg0, Throwable arg1) {
-		realLogger.warn(arg0, arg1);
+		try {
+			realLogger.warn(arg0, arg1);
+		} catch (Exception e) {
+			
+		}
+		
 	}
 	/**
 	 * @param arg0
 	 * @see org.apache.logging.log4j.Logger#warn(java.lang.String)
 	 */
 	public void warn(String arg0) {
-		realLogger.warn(arg0);
+		try {
+			realLogger.warn(arg0);
+		} catch (Exception e) {
+			
+		}
+		
 	}
 	/**
 	 * @param arg0
 	 * @see org.apache.logging.log4j.Logger#catching(java.lang.Throwable)
 	 */
 	public void catching(Throwable arg0) {
-		realLogger.catching(arg0);
+		try {
+			realLogger.catching(arg0);
+		} catch (Exception e) {
+			
+		}
+		
 	}
 	
 }
