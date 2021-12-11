@@ -53,16 +53,24 @@ public class Log4j2ConfigurationFactory extends ConfigurationFactory {
 	public Log4j2Configuration getConfiguration(){
 		return configuration;
 	}
+	
+	@Override
+	public Configuration getConfiguration(LoggerContext loggerContext, ConfigurationSource source) {
+		return configuration;
+	}
+	
+	@Override
+	public Configuration getConfiguration(LoggerContext loggerContext, String name, URI configLocation,
+			ClassLoader loader) {
+		return configuration;
+	}
+	
+	@Override
+	public Configuration getConfiguration(LoggerContext loggerContext, String name, URI configLocation) {
+		return configuration;
+	}
 	//
-	@Override
-	public Configuration getConfiguration(ConfigurationSource source) {
-		return configuration;
-	}
-
-	@Override
-	public Configuration getConfiguration(String name, URI configLocation) {
-		return configuration;
-	}
+	
 	//
 	/**
 	 * 
@@ -105,10 +113,10 @@ public class Log4j2ConfigurationFactory extends ConfigurationFactory {
 					Target.SYSTEM_OUT,
 					CONSOLE_LOG_NAME,
 					true,
+					false,
 					false);
 			//remove default console logger
 			getRootLogger().removeAppender("DefaultConsole-1");
-			
 			//
 			addAppender(consoleAppender);
 			getRootLogger().addAppender(consoleAppender, Level.ALL, null);
@@ -208,4 +216,5 @@ public class Log4j2ConfigurationFactory extends ConfigurationFactory {
 			}
 		}
 	}
+	
 }
